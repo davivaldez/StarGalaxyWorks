@@ -92,7 +92,7 @@ A Star Galaxy Works foi um projeto desenvolvido com o objetivo de criar naves co
     <img src="./previews/all-spaceships.PNG" alt="All Spaceships">
 </p>
 
-### Adicionar um novo membro a tripulação
+### Adicionar um novo membro na tripulação
 
 #### Clique no botão "Adicionar novo tripulante" e forneça o nome do tripulante.
 
