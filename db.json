@@ -1,0 +1,18 @@
+{
+  "spaceships": [
+    {
+      "name": "Millenium Falcon",
+      "pilot": "Han Solo",
+      "crewLimit": 5,
+      "crew": [
+        "Luke",
+        "Leia",
+        "C3-PO",
+        "R2-D2",
+        "Chewbacca"
+      ],
+      "inMission": true,
+      "id": 1
+    }
+  ]
+}

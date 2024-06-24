@@ -1,0 +1,22 @@
+{
+  "name": "stargalaxyworks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "tsc-watch": "tsc --watch",
+    "json-server": "json-server --watch db.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsc-alias": "^1.8.10",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "json-server": "^0.17.4"
+  }
+}
