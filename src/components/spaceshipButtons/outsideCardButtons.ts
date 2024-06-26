@@ -4,7 +4,7 @@ import { getShips, createShip } from "../../api/spaceshipService";
 import { Spaceship } from "../../models/spaceshipModel";
 
 export async function loadSpaceships() {
-  const ships = await getShips();
+  const ships: Spaceship[] = await getShips();
   spaceships.push(...ships);
   ships.forEach(renderSpaceship);
 }
