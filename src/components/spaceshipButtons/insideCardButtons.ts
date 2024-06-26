@@ -14,14 +14,7 @@ export async function addOneCrew(id: number) {
     const crewMemberConfirm = confirm("Tem certeza que deseja adicionar esse tripulante a nave ?");
 
     if (crewMemberConfirm) {
-      const spaceship: {
-        id: number;
-        name: string;
-        pilot: string;
-        crewLimit: number;
-        crew: string[];
-        inMission: boolean;
-      } = findSpaceship(id);
+      const spaceship = findSpaceship(id);
 
       if (spaceship.crew.length >= spaceship.crewLimit) {
         alert("Limite da tripulação excedida!");
@@ -45,14 +38,7 @@ export async function sendSpaceship(id: number) {
     if (!missionConfirm) {
       throw new Error("Missão cancelada!");
     } else {
-      const spaceship: {
-        id: number;
-        name: string;
-        pilot: string;
-        crewLimit: number;
-        crew: string[];
-        inMission: boolean;
-      } = findSpaceship(id);
+      const spaceship = findSpaceship(id);
 
       if (!spaceship.inMission) {
         const limit = spaceship.crewLimit * 0.3;

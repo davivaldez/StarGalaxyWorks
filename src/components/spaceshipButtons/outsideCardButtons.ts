@@ -1,6 +1,7 @@
 import { spaceships } from "./insideCardButtons";
 import { renderSpaceship } from "../spaceshipCard";
 import { getShips, createShip } from "../../api/spaceshipService";
+import { Spaceship } from "../../models/spaceshipModel";
 
 export async function loadSpaceships() {
   const ships = await getShips();
@@ -17,7 +18,7 @@ async function addSpaceship(spaceshipName: string, spaceshipPilot: string, numbe
     inMission: false,
   };
 
-  const newSpaceship: { id: number; name: string; pilot: string; crewLimit: number; crew: string[]; inMission: boolean } = await createShip(spaceship);
+  const newSpaceship: Spaceship = await createShip(spaceship);
 
   spaceships.push(newSpaceship);
   renderSpaceship(newSpaceship);
@@ -69,7 +70,7 @@ export function imprimeSpaceships() {
     }
 
     let spaceshipsInformations: string = "";
-    spaceships.forEach((spaceship: { name: string; pilot: string; crewLimit: number; crew: string[]; inMission: boolean }) => {
+    spaceships.forEach((spaceship: Spaceship) => {
       const spaceshipName = `Nave: ${spaceship.name}`;
       const spaceshipPilot = `Piloto: ${spaceship.pilot}`;
       const spaceshipInMission = `Em missão: ${spaceship.inMission ? "Sim" : "Não"}`;

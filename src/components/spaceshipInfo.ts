@@ -1,14 +1,7 @@
 import { findSpaceship } from "../utils/spaceshipUtils";
 
 export function informationSpaceship(id: number) {
-  const spaceship: {
-    id: number;
-    name: string;
-    pilot: string;
-    crewLimit: number;
-    crew: string[];
-    inMission: boolean;
-  } = findSpaceship(id);
+  const spaceship = findSpaceship(id);
 
   if (spaceship.inMission) {
     document.getElementById(`in-mission-${id}`).textContent = "Em missão: A nave está em uma missão";
